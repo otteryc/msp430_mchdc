@@ -69,21 +69,21 @@ void voting(ballot_box_t *ballot_box, hv_t vote) {
     /* Should be automatically unrolled. */
     uint8_t byte = vote.hv[iter];
 
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
-    byte >>= 1;
-    *ballot_box++ += byte & 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
+    byte <<= 1;
+    *ballot_box++ += byte & 0b1000000;
   }
 }
 

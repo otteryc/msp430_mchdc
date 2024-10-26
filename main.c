@@ -47,4 +47,6 @@ int main() {
   init();
   encoding();
   volatile uint8_t result = classification();
+
+  printf("result: %d\n", result);
 }
