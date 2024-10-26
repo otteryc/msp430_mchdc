@@ -72,10 +72,22 @@ void voting(ballot_box_t *ballot_box, hv_t vote)
     uint16_t iter;
     ITER_HV(iter) {
         /* Should be automatically unrolled. */
-        uint16_t i = BITS_IN_BYTE;
-        while (i--) {
-            *ballot_box++ += get_bit_in_byte(vote.hv[iter], i);
-        }
+        uint8_t byte = vote.hv[iter];
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
+        byte <<= 1;
+        *ballot_box++ += byte & 0b1000000;
     }
 }
 

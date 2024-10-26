@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Wed Sep 11 12:18:41 2024
+>> Linked Wed Sep 11 13:45:44 2024
 
 OUTPUT FILE NAME:   <msp430_mchdc.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_mpu"  address: 00005800
@@ -20,7 +20,7 @@ MEMORY CONFIGURATION
   RAM                   00001c00   00001000  00000408  00000bf8  RWIX
   LEARAM                00002c00   00000ec8  00000310  00000bb8  RWIX
   LEASTACK              00003ac8   00000138  00000000  00000138  RWIX
-  FRAM                  00004000   0000bf80  0000191c  0000a664  RWIX
+  FRAM                  00004000   0000bf80  0000191a  0000a666  RWIX
   JTAGSIGNATURE         0000ff80   00000004  00000004  00000000  RWIX  ffff 
   BSLSIGNATURE          0000ff84   00000004  00000004  00000000  RWIX  ffff 
   IPESIGNATURE          0000ff88   00000008  00000008  00000000  RWIX  ffff 
@@ -110,12 +110,12 @@ section   page    origin      length       input sections
 .ipe:_isr 
 *          0    00005800    00000000     UNINITIALIZED
 
-.cinit     0    00005828    000000f4     
+.cinit     0    00005828    000000f2     
                   00005828    000000ce     (.cinit..TI.bound:input_image.load) [load image, compression = lzss]
-                  000058f6    0000000d     (.cinit..data.load) [load image, compression = lzss]
-                  00005903    00000001     --HOLE-- [fill = 0]
-                  00005904    00000008     (__TI_handler_table)
-                  0000590c    00000010     (__TI_cinit_table)
+                  000058f6    0000000b     (.cinit..data.load) [load image, compression = lzss]
+                  00005901    00000001     --HOLE-- [fill = 0]
+                  00005902    00000008     (__TI_handler_table)
+                  0000590a    00000010     (__TI_cinit_table)
 
 .init_array 
 *          0    00004000    00000000     UNINITIALIZED
@@ -126,8 +126,8 @@ section   page    origin      length       input sections
                   00005820    00000008                            : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
 
 .data      0    00002000    00000008     UNINITIALIZED
-                  00002000    00000004     main.obj (.data)
-                  00002004    00000004     main.obj (.data:temp)
+                  00002000    00000004     main.obj (.data:inferencing)
+                  00002004    00000004     main.obj (.data)
 
 .stack     0    00001c00    00000400     UNINITIALIZED
                   00001c00    00000004     rts430x_lc_rd_eabi.lib : boot.c.obj (.stack)
@@ -402,21 +402,21 @@ MODULE SUMMARY
        Total:                       3902   76        0      
                                                             
        Stack:                       0      0         1024   
-       Linker Generated:            0      243       0      
+       Linker Generated:            0      241       0      
     +--+----------------------------+------+---------+---------+
-       Grand Total:                 5364   5951      1816   
+       Grand Total:                 5364   5949      1816   
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 0000590c records: 2, size/record: 8, table size: 16
+__TI_cinit_table @ 0000590a records: 2, size/record: 8, table size: 16
 	.TI.bound:input_image: load addr=00005828, load size=000000ce bytes, run addr=00002c00, run size=00000310 bytes, compression=lzss
-	.data: load addr=000058f6, load size=0000000d bytes, run addr=00002000, run size=00000008 bytes, compression=lzss
+	.data: load addr=000058f6, load size=0000000b bytes, run addr=00002000, run size=00000008 bytes, compression=lzss
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00005904 records: 2, size/record: 4, table size: 8
+__TI_handler_table @ 00005902 records: 2, size/record: 4, table size: 8
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 
@@ -1970,11 +1970,11 @@ address   name
 0000015c  WDTCTL_L                               
 00002000  __STACK_END                            
 00000400  __STACK_SIZE                           
-0000590c  __TI_CINIT_Base                        
-0000591c  __TI_CINIT_Limit                       
-0000591c  __TI_CINIT_Warm                        
-00005904  __TI_Handler_Table_Base                
-0000590c  __TI_Handler_Table_Limit               
+0000590a  __TI_CINIT_Base                        
+0000591a  __TI_CINIT_Limit                       
+0000591a  __TI_CINIT_Warm                        
+00005902  __TI_Handler_Table_Base                
+0000590a  __TI_Handler_Table_Limit               
 00005820  __TI_ISR_TRAP                          
 0001116e  __TI_auto_init_nobinit_nopinit_hold_wdt
 00010f7e  __TI_decompress_lzss                   
@@ -2092,7 +2092,7 @@ ffffffff  __c_args__
 000114c6  _system_pre_init                       
 000114c0  abort                                  
 00010ff4  bind_hypervector                       
-00002000  bx                                     
+00002004  bx                                     
 0001141c  bzero                                  
 00004000  class_hypervectors                     
 00010dde  classification                         
@@ -2102,6 +2102,7 @@ ffffffff  __c_args__
 00005800  fram_ipe_start                         
 00004000  fram_rw_start                          
 00005800  fram_rx_start                          
+00002000  inferencing                            
 0001143e  init                                   
 00002c00  input_image                            
 0001133e  main                                   
@@ -2113,7 +2114,6 @@ ffffffff  __c_args__
 000111c2  open_ballot_box                        
 00011116  permute_by_byte                        
 00005400  position_hypervectors                  
-00002004  temp                                   
 0001105a  voting                                 
 
 
@@ -3669,8 +3669,8 @@ address   name
 00000afe  LEAIVH                                 
 00001c00  _stack                                 
 00002000  __STACK_END                            
-00002000  bx                                     
-00002004  temp                                   
+00002000  inferencing                            
+00002004  bx                                     
 00002c00  input_image                            
 00004000  class_hypervectors                     
 00004000  fram_rw_start                          
@@ -3680,11 +3680,11 @@ address   name
 00005800  fram_ipe_start                         
 00005800  fram_rx_start                          
 00005820  __TI_ISR_TRAP                          
-00005904  __TI_Handler_Table_Base                
-0000590c  __TI_CINIT_Base                        
-0000590c  __TI_Handler_Table_Limit               
-0000591c  __TI_CINIT_Limit                       
-0000591c  __TI_CINIT_Warm                        
+00005902  __TI_Handler_Table_Base                
+0000590a  __TI_CINIT_Base                        
+0000590a  __TI_Handler_Table_Limit               
+0000591a  __TI_CINIT_Limit                       
+0000591a  __TI_CINIT_Warm                        
 00009fbb  mpu_sam_value                          
 0000a501  mpu_ctl0_value                         
 0000ffb4  __TI_int18                             
