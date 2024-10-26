@@ -1,4 +1,3 @@
-#pragma PERSISTENT(level_hypervectors)
 const unsigned char level_hypervectors[][512] = {
     [0] =
         {
@@ -501,8 +500,7 @@ const unsigned char level_hypervectors[][512] = {
             0xec, 0xe8, 0x63, 0xb3, 0xe8, 0x29,
         },
 };
-#pragma PERSISTENT(position_hypervectors)
-const unsigned char position_hypervectors[][512] = {
+unsigned char position_hypervectors[][512] = {
     [0] =
         {
             0xdb, 0x9f, 0xc0, 0xa5, 0x41, 0xb3, 0x9,  0xbe, 0xe0, 0xf8, 0x27,
@@ -554,7 +552,6 @@ const unsigned char position_hypervectors[][512] = {
             0xee, 0xee, 0xf7, 0x3d, 0x11, 0x89,
         },
 };
-#pragma PERSISTENT(class_hypervectors)
 const unsigned char class_hypervectors[][512] = {
     [0] =
         {
