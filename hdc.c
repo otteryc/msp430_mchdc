@@ -1,11 +1,9 @@
 #include "hdc.h"
 #include "common.h"
 
-bool get_bit_in_byte(uint8_t byte, uint8_t index) {
-  return (byte & (1 << index)) >> index;
+static inline void set_bit_in_byte(uint8_t *byte, uint8_t index) {
+  *byte |= 1 << index;
 }
-
-void set_bit_in_byte(uint8_t *byte, uint8_t index) { *byte |= 1 << index; }
 
 uint8_t popcount32(uint32_t n) {
   n = (n & 0x55555555) + ((n >> 1) & 0x55555555);
@@ -69,10 +67,23 @@ void voting(ballot_box_t *ballot_box, hv_t vote) {
   uint16_t iter;
   ITER_HV(iter) {
     /* Should be automatically unrolled. */
-    uint16_t i = BITS_IN_BYTE;
-    while (i--) {
-      *ballot_box++ += get_bit_in_byte(vote.hv[iter], i);
-    }
+    uint8_t byte = vote.hv[iter];
+
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
   }
 }
 
