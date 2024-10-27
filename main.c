@@ -23,7 +23,7 @@ void encoding() {
     if (feature == 10)
       feature = 9;
     bind_hypervector(inferencing, (hv_t){position_hypervectors[0]},
-                     (hv_t){class_hypervectors[feature]});
+                     (hv_t){level_hypervectors[feature]});
     permute_by_byte((hv_t){position_hypervectors[0]});
     voting(bx, inferencing);
   }
