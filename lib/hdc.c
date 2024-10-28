@@ -50,7 +50,7 @@ void permute_by_byte(hv_t hv) {
 
 uint16_t hamming(hv_t hv1, hv_t hv2) {
   uint16_t iter;
-  uint32_t dot_product = 0;
+  uint16_t dot_product = 0;
   ITER_HV_32(iter) {
     dot_product += popcount32(hv1.hv32[iter] ^ hv2.hv32[iter]);
   }
@@ -59,7 +59,7 @@ uint16_t hamming(hv_t hv1, hv_t hv2) {
 
 uint16_t hamming_table(hv_t hv1, hv_t hv2) {
   uint16_t iter;
-  uint32_t dot_product = 0;
+  uint16_t dot_product = 0;
   ITER_HV(iter) {
     dot_product += popcount_table[hv1.hv[iter] ^ hv2.hv[iter]];
   }
@@ -69,7 +69,7 @@ uint16_t hamming_table(hv_t hv1, hv_t hv2) {
 /* Naive method */
 double cosine_similarity(hv_t hv1, hv_t hv2) {
   uint16_t iter;
-  uint32_t dot_product = 0, len_hv1 = 0, len_hv2 = 0;
+  uint16_t dot_product = 0, len_hv1 = 0, len_hv2 = 0;
   ITER_HV_32(iter) {
     dot_product += popcount32(hv1.hv32[iter] & hv2.hv32[iter]);
     len_hv1 += popcount32(hv1.hv32[iter]);
