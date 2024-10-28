@@ -108,6 +108,7 @@ void open_ballot_box(hv_t dest, ballot_box_t *box) {
     /* Both *box++ and IMG_SIZE shall not be over 1024,
      * therefore, we simply check if the minus op overflowed*/
     ITER_HV(iter) {
+      *byte = 0;
       *byte |= (IMG_SIZE / 2 - *box++) >> 15;
       *byte <<= 1;
       *byte |= (IMG_SIZE / 2 - *box++) >> 15;
@@ -125,3 +126,4 @@ void open_ballot_box(hv_t dest, ballot_box_t *box) {
       *byte |= (IMG_SIZE / 2 - *box++) >> 15;
       byte++;
     }
+}
