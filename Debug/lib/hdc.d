@@ -1,6 +1,7 @@
 # FIXED
 
 lib/hdc.obj: ../lib/hdc.c
+lib/hdc.obj: C:/Users/otter/workspace_v12/msp430_mchdc/hdc.h
 lib/hdc.obj: C:/Users/otter/workspace_v12/msp430_mchdc/common.h
 lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdint.h
 lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_ti_config.h
@@ -13,9 +14,10 @@ lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/m
 lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/machine/_stdint.h
 lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/sys/_stdint.h
 lib/hdc.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdbool.h
-lib/hdc.obj: C:/Users/otter/workspace_v12/msp430_mchdc/hdc.h
 
 ../lib/hdc.c:
+
+C:/Users/otter/workspace_v12/msp430_mchdc/hdc.h:
 
 C:/Users/otter/workspace_v12/msp430_mchdc/common.h:
 
@@ -40,6 +42,4 @@ C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/machine/_stdin
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/sys/_stdint.h:
 
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdbool.h:
-
-C:/Users/otter/workspace_v12/msp430_mchdc/hdc.h:
 

@@ -20,8 +20,6 @@ void encoding() {
   unsigned char *img_iter = input_image;
   while (--iter) {
     feature = *img_iter++ / 25;
-    if (feature == 10)
-      feature = 9;
     bind_hypervector(inferencing, (hv_t){position_hypervectors[0]},
                      (hv_t){level_hypervectors[feature]});
     permute_by_byte((hv_t){position_hypervectors[0]});
@@ -33,9 +31,9 @@ void encoding() {
 
 uint8_t classification() {
   uint8_t result = 255;
-  uint16_t min = 0xFFFF;
+  uint16_t min = 0xFFFF, cur;
   for (uint8_t i = 0; i < 10; i++) {
-    if (cur = hamming(inferencing, (hv_t){class_hypervectors[i]}), min > cur) {
+    if (cur = hamming_table(inferencing, (hv_t){class_hypervectors[i]}), min > cur) {
       min = cur;
       result = i;
     }
@@ -47,7 +45,6 @@ int main() {
   init();
   encoding();
   volatile uint8_t result = classification();
-
   /* The LED on the board while start blinking if the inference completed.*/
   volatile int x = 30000;
   P1DIR |= 0x03;

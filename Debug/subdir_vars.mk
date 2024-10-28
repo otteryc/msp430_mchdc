@@ -35,7 +35,6 @@ C_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../hv.c" \
-"../image.c" \
-"../main.c" 
+"../image.c" 
 
 

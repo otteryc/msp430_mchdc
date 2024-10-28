@@ -14,6 +14,7 @@ ORDERED_OBJS += \
 "./image.obj" \
 "./main.obj" \
 "./lib/hdc.obj" \
+"./lib/popcount_table.obj" \
 "../lnk_msp430fr5994.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibmpu_init.a \
@@ -141,15 +142,15 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 msp430_mchdc.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE --define=_MPU_MANUAL --define=_MPU_SEGB1=0x4400 --define=_MPU_SEGB2=0x4800 --define=_MPU_SAM1=11 --define=_MPU_SAM2=11 --define=_MPU_SAM3=15 --define=_MPU_SAM0=9 -g --c99 --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"msp430_mchdc.map" --heap_size=0 --stack_size=1024 --cinit_hold_wdt=on -i"C:/ti/ccs1220/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1220/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1220/ccs/ccs_base/msp430/lib/FR59xx" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --define=_MPU_MANUAL --define=_MPU_SEGB1=0x4400 --define=_MPU_SEGB2=0x4800 --define=_MPU_SAM1=11 --define=_MPU_SAM2=11 --define=_MPU_SAM3=15 --define=_MPU_SAM0=9 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="msp430_mchdc_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "msp430_mchdc.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --data_model=restricted -O4 --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE --define=_MPU_MANUAL --define=_MPU_SEGB1=0x4400 --define=_MPU_SEGB2=0x4800 --define=_MPU_SAM1=11 --define=_MPU_SAM2=11 --define=_MPU_SAM3=15 --define=_MPU_SAM0=9 -g --c99 --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"msp430_mchdc.map" --heap_size=0 --stack_size=1024 --cinit_hold_wdt=on -i"C:/ti/ccs1220/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1220/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccs1220/ccs/ccs_base/msp430/lib/FR59xx" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --define=_MPU_MANUAL --define=_MPU_SEGB1=0x4400 --define=_MPU_SEGB2=0x4800 --define=_MPU_SAM1=11 --define=_MPU_SAM2=11 --define=_MPU_SAM3=15 --define=_MPU_SAM0=9 --diag_wrap=off --display_error_number --warn_sections --xml_link_info="msp430_mchdc_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "msp430_mchdc.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "hv.obj" "image.obj" "main.obj" "lib\hdc.obj" 
-	-$(RM) "hv.d" "image.d" "main.d" "lib\hdc.d" 
+	-$(RM) "hv.obj" "image.obj" "main.obj" "lib\hdc.obj" "lib\popcount_table.obj" 
+	-$(RM) "hv.d" "image.d" "main.d" "lib\hdc.d" "lib\popcount_table.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

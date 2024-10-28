@@ -1,6 +1,8 @@
 #include "hdc.h"
 #include "common.h"
 
+extern uint8_t popcount_table[256];
+
 static inline uint8_t popcount32(uint32_t n) {
   n = (n & 0x55555555) + ((n >> 1) & 0x55555555);
   n = (n & 0x33333333) + ((n >> 2) & 0x33333333);
@@ -55,12 +57,21 @@ uint16_t hamming(hv_t hv1, hv_t hv2) {
   return dot_product;
 }
 
+uint16_t hamming_table(hv_t hv1, hv_t hv2) {
+  uint16_t iter;
+  uint32_t dot_product = 0;
+  ITER_HV(iter) {
+    dot_product += popcount_table[hv1.hv[iter] ^ hv2.hv[iter]];
+  }
+  return dot_product;
+}
+
 /* Naive method */
 double cosine_similarity(hv_t hv1, hv_t hv2) {
   uint16_t iter;
   uint32_t dot_product = 0, len_hv1 = 0, len_hv2 = 0;
   ITER_HV_32(iter) {
-    dot_product += popcount32(hv1.hv32[iter] ^ hv2.hv32[iter]);
+    dot_product += popcount32(hv1.hv32[iter] & hv2.hv32[iter]);
     len_hv1 += popcount32(hv1.hv32[iter]);
     len_hv2 += popcount32(hv2.hv32[iter]);
   }
@@ -73,32 +84,44 @@ void voting(ballot_box_t *ballot_box, hv_t vote) {
   ITER_HV(iter) {
     /* Should be automatically unrolled. */
     uint8_t byte = vote.hv[iter];
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
-    byte <<= 1;
-    *ballot_box++ += byte & 0b1000000;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
+    byte >>= 1;
+    *ballot_box++ += byte & 1;
   }
 }
 
 void open_ballot_box(hv_t dest, ballot_box_t *box) {
-  uint16_t iter;
-  ITER_HV(iter) {
-    uint16_t i = BITS_IN_BYTE;
-    while (i--) {
-      if (*box++ >= IMG_SIZE / 2) {
-        set_bit_in_byte(dest.hv + iter, i);
-      }
+    uint16_t iter;
+    uint8_t *byte = dest.hv;
+    /* Both *box++ and IMG_SIZE shall not be over 1024,
+     * therefore, we simply check if the minus op overflowed*/
+    ITER_HV(iter) {
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      *byte <<= 1;
+      *byte |= (IMG_SIZE / 2 - *box++) >> 15;
+      byte++;
     }
-  }
-}
