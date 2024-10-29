@@ -42,9 +42,9 @@ void permute_by_byte(hv_t hv) {
   /* Last byte in hypervector. */
   uint16_t n = DIMENSION / BITS_IN_BYTE - 1;
   uint8_t tmp = hv.hv[n];
-  while (--n) {
+  do{
     hv.hv[n] = hv.hv[n - 1];
-  }
+  } while(n--);
   *hv.hv = tmp;
 }
 
