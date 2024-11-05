@@ -511,6 +511,7 @@ const unsigned char level_hypervectors[][512] = {
         },
 
 };
+#pragma LOCATION(position_hypervectors, 0x2440)
 #pragma PERSISTENT(position_hypervectors)
 const unsigned char position_hypervectors[][512] = {
     [0] =

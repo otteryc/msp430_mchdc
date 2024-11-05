@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Sun Oct 27 23:21:40 2024
+>> Linked Mon Nov  4 17:12:48 2024
 
 OUTPUT FILE NAME:   <msp430_mchdc.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_mpu"  address: 00006c00
@@ -80,7 +80,7 @@ MEMORY CONFIGURATION
   INT53                 0000fffa   00000002  00000002  00000000  RWIX
   INT54                 0000fffc   00000002  00000002  00000000  RWIX
   RESET                 0000fffe   00000002  00000002  00000000  RWIX
-  FRAM2                 00010000   00033ff8  0000047c  00033b7c  RWIX
+  FRAM2                 00010000   00033ff8  0000041a  00033bde  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -274,26 +274,26 @@ SYSNMI     0    0000fffc    00000002
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430x_lc_rd_eabi.lib : boot.c.obj (.reset)
 
-.text      0    00010000    0000047c     
-                  00010000    000000ae     hdc.obj (.text:open_ballot_box)
-                  000100ae    0000008a     main.obj (.text:encoding)
-                  00010138    00000076     rts430x_lc_rd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  000101ae    00000064     main.obj (.text:main)
-                  00010212    00000056     hdc.obj (.text:voting)
-                  00010268    00000054     rts430x_lc_rd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
-                  000102bc    0000004a     main.obj (.text:classification)
-                  00010306    00000044     hdc.obj (.text:bind_hypervector)
-                  0001034a    0000003a     hdc.obj (.text:hamming_table)
-                  00010384    00000038     hdc.obj (.text:permute_by_byte)
-                  000103bc    0000002c     MSPMPU_INIT_LIB_CCS_msp430_large_code_restricted_data.lib : mpu_init.o (.text:__mpu_init)
-                  000103e8    0000002c     rts430x_lc_rd_eabi.lib : div16s.asm.obj (.text)
-                  00010414    00000022     hdc.obj (.text:bzero)
-                  00010436    00000016     rts430x_lc_rd_eabi.lib : div16u.asm.obj (.text)
-                  0001044c    00000012                            : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  0001045e    00000012                            : memcpy.c.obj (.text:memcpy)
-                  00010470    00000006                            : exit.c.obj (.text:abort)
-                  00010476    00000004                            : pre_init.c.obj (.text:_system_pre_init)
-                  0001047a    00000002                            : startup.c.obj (.text:_system_post_cinit)
+.text      0    00010000    0000041a     
+                  00010000    0000008a     main.obj (.text:encoding)
+                  0001008a    00000076     rts430x_lc_rd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00010100    00000064     hdc.obj (.text:open_ballot_box)
+                  00010164    00000056     hdc.obj (.text:voting)
+                  000101ba    00000054     rts430x_lc_rd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
+                  0001020e    00000052     main.obj (.text:main)
+                  00010260    0000004a     main.obj (.text:classification)
+                  000102aa    00000044     hdc.obj (.text:bind_hypervector)
+                  000102ee    0000003a     hdc.obj (.text:permute_by_byte)
+                  00010328    00000032     hdc.obj (.text:hamming_table)
+                  0001035a    0000002c     MSPMPU_INIT_LIB_CCS_msp430_large_code_restricted_data.lib : mpu_init.o (.text:__mpu_init)
+                  00010386    0000002c     rts430x_lc_rd_eabi.lib : div16s.asm.obj (.text)
+                  000103b2    00000022     hdc.obj (.text:bzero)
+                  000103d4    00000016     rts430x_lc_rd_eabi.lib : div16u.asm.obj (.text)
+                  000103ea    00000012                            : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  000103fc    00000012                            : memcpy.c.obj (.text:memcpy)
+                  0001040e    00000006                            : exit.c.obj (.text:abort)
+                  00010414    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+                  00010418    00000002                            : startup.c.obj (.text:_system_post_cinit)
 
 MODULE SUMMARY
 
@@ -302,22 +302,22 @@ MODULE SUMMARY
     .\
        hv.obj                       0      10752     0      
        image.obj                    0      0         784    
-       main.obj                     312    0         8      
+       main.obj                     294    0         8      
     +--+----------------------------+------+---------+---------+
-       Total:                       312    10752     792    
+       Total:                       294    10752     792    
                                                             
     .\lib\
-       hdc.obj                      476    0         0      
+       hdc.obj                      396    0         0      
        popcount_table.obj           0      0         256    
     +--+----------------------------+------+---------+---------+
-       Total:                       476    0         256    
+       Total:                       396    0         256    
                                                             
-    C:\ti\ccs1220\ccs\ccs_base\msp430\lib\FR59xx\MSPMPU_INIT_LIB_CCS_msp430_large_code_restricted_data.lib
+    C:\ti\ccs1280\ccs\ccs_base\msp430\lib\FR59xx\MSPMPU_INIT_LIB_CCS_msp430_large_code_restricted_data.lib
        mpu_init.o                   44     0         0      
     +--+----------------------------+------+---------+---------+
        Total:                       44     0         0      
                                                             
-    C:\ti\ccs1220\ccs\tools\compiler\ti-cgt-msp430_21.6.1.LTS\lib\rts430x_lc_rd_eabi.lib
+    C:\ti\ccs1280\ccs\tools\compiler\ti-cgt-msp430_21.6.1.LTS\lib\rts430x_lc_rd_eabi.lib
        copy_decompress_lzss.c.obj   118    0         0      
        autoinit.c.obj               84     0         0      
        div16s.asm.obj               44     0         0      
@@ -372,7 +372,7 @@ MODULE SUMMARY
        Stack:                       0      0         1024   
        Linker Generated:            0      349       0      
     +--+----------------------------+------+---------+---------+
-       Grand Total:                 1188   11177     2072   
+       Grand Total:                 1090   11177     2072   
 
 
 LINKER GENERATED COPY TABLES
@@ -654,7 +654,7 @@ address   name
 000004bc  BIN2BCD                                
 000004bd  BIN2BCD_H                              
 000004bc  BIN2BCD_L                              
-00010470  C$$EXIT                                
+0001040e  C$$EXIT                                
 0000043e  CAPTIO0CTL                             
 0000043f  CAPTIO0CTL_H                           
 0000043e  CAPTIO0CTL_L                           
@@ -1944,9 +1944,9 @@ address   name
 00006d6e  __TI_Handler_Table_Base                
 00006d76  __TI_Handler_Table_Limit               
 00006c20  __TI_ISR_TRAP                          
-00010268  __TI_auto_init_nobinit_nopinit_hold_wdt
-00010138  __TI_decompress_lzss                   
-0001044c  __TI_decompress_none                   
+000101ba  __TI_auto_init_nobinit_nopinit_hold_wdt
+0001008a  __TI_decompress_lzss                   
+000103ea  __TI_decompress_none                   
 0000ffb4  __TI_int18                             
 0000ffb6  __TI_int19                             
 0000ffb8  __TI_int20                             
@@ -1989,42 +1989,42 @@ ffffffff  __TI_prof_data_size
 ffffffff  __TI_prof_data_start                   
 ffffffff  __c_args__                             
 00000001  __mpu_enable                           
-000103bc  __mpu_init                             
-000103e8  __mspabi_divi                          
-00010436  __mspabi_divu                          
-000103e8  __mspabi_remi                          
-00010436  __mspabi_remu                          
+0001035a  __mpu_init                             
+00010386  __mspabi_divi                          
+000103d4  __mspabi_divu                          
+00010386  __mspabi_remi                          
+000103d4  __mspabi_remu                          
 00006c00  _c_int00_noargs_mpu                    
 0000fffe  _reset_vector                          
 00001c00  _stack                                 
-0001047a  _system_post_cinit                     
-00010476  _system_pre_init                       
-00010470  abort                                  
-00010306  bind_hypervector                       
+00010418  _system_post_cinit                     
+00010414  _system_pre_init                       
+0001040e  abort                                  
+000102aa  bind_hypervector                       
 00002104  bx                                     
-00010414  bzero                                  
+000103b2  bzero                                  
 00004000  class_hypervectors                     
-000102bc  classification                         
-000100ae  encoding                               
+00010260  classification                         
+00010000  encoding                               
 00006c00  fram_ipe_end                           
 00006c00  fram_ipe_start                         
 00004000  fram_rw_start                          
 00006c00  fram_rx_start                          
-0001034a  hamming_table                          
+00010328  hamming_table                          
 00002100  inferencing                            
 00002c00  input_image                            
 00005400  level_hypervectors                     
-000101ae  main                                   
-0001045e  memcpy                                 
+0001020e  main                                   
+000103fc  memcpy                                 
 0000a501  mpu_ctl0_value                         
 00009fbb  mpu_sam_value                          
 00000440  mpu_segment_border1                    
 00000480  mpu_segment_border2                    
-00010000  open_ballot_box                        
-00010384  permute_by_byte                        
+00010100  open_ballot_box                        
+000102ee  permute_by_byte                        
 00002000  popcount_table                         
 00006800  position_hypervectors                  
-00010212  voting                                 
+00010164  voting                                 
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -3637,28 +3637,28 @@ address   name
 0000fffa  __TI_int53                             
 0000fffc  __TI_int54                             
 0000fffe  _reset_vector                          
-00010000  open_ballot_box                        
-000100ae  encoding                               
-00010138  __TI_decompress_lzss                   
-000101ae  main                                   
-00010212  voting                                 
-00010268  __TI_auto_init_nobinit_nopinit_hold_wdt
-000102bc  classification                         
-00010306  bind_hypervector                       
-0001034a  hamming_table                          
-00010384  permute_by_byte                        
-000103bc  __mpu_init                             
-000103e8  __mspabi_divi                          
-000103e8  __mspabi_remi                          
-00010414  bzero                                  
-00010436  __mspabi_divu                          
-00010436  __mspabi_remu                          
-0001044c  __TI_decompress_none                   
-0001045e  memcpy                                 
-00010470  C$$EXIT                                
-00010470  abort                                  
-00010476  _system_pre_init                       
-0001047a  _system_post_cinit                     
+00010000  encoding                               
+0001008a  __TI_decompress_lzss                   
+00010100  open_ballot_box                        
+00010164  voting                                 
+000101ba  __TI_auto_init_nobinit_nopinit_hold_wdt
+0001020e  main                                   
+00010260  classification                         
+000102aa  bind_hypervector                       
+000102ee  permute_by_byte                        
+00010328  hamming_table                          
+0001035a  __mpu_init                             
+00010386  __mspabi_divi                          
+00010386  __mspabi_remi                          
+000103b2  bzero                                  
+000103d4  __mspabi_divu                          
+000103d4  __mspabi_remu                          
+000103ea  __TI_decompress_none                   
+000103fc  memcpy                                 
+0001040e  C$$EXIT                                
+0001040e  abort                                  
+00010414  _system_pre_init                       
+00010418  _system_post_cinit                     
 ffffffff  __TI_pprof_out_hndl                    
 ffffffff  __TI_prof_data_size                    
 ffffffff  __TI_prof_data_start                   

@@ -22,6 +22,9 @@ typedef struct Hypervector {
 } hv_t ;
 
 typedef uint16_t ballot_box_t;
+#define ITER_HV_HALF(iter)                                 \
+    for (iter = 0; iter < (DIMENSION / BITS_IN_BYTE)/2; iter++)
+
 #define ITER_HV(iter)                                 \
     for (iter = 0; iter < DIMENSION / BITS_IN_BYTE; iter++)
 

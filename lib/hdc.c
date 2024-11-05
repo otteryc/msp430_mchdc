@@ -15,7 +15,7 @@ static inline uint8_t popcount32(uint32_t n) {
 /* `n` should be multiple of 4 */
 void bzero(void *mem, uint32_t n) {
   uint32_t *iter = (uint32_t *)mem;
-  while (n > 4) {
+  while (n >= 4) {
     *(uint32_t *)iter++ = 0;
     n -= 4;
   }
@@ -81,7 +81,7 @@ double cosine_similarity(hv_t hv1, hv_t hv2) {
 
 void voting(ballot_box_t *ballot_box, hv_t vote) {
   uint16_t iter;
-  ITER_HV(iter) {
+  ITER_HV_HALF(iter) {
     /* Should be automatically unrolled. */
     uint8_t byte = vote.hv[iter];
     *ballot_box++ += byte & 1;
