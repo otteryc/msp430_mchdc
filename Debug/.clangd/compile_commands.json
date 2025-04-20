@@ -1,12 +1,207 @@
 [
    {
-      "directory" : "C:/Users/otter/workspace_v12/msp430_mchdc/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia150/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_v12/msp430_mchdc\" -I\"C:/ti/ccstheia150/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE",
-      "file"      : "C:/Users/otter/workspace_v12/msp430_mchdc/lib/hdc.c"
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/hv.c"
    },
    {
-      "directory" : "C:/Users/otter/workspace_v12/msp430_mchdc/Debug",
-      "command"   : "clang++ -I\"C:/ti/ccstheia150/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_v12/msp430_mchdc\" -I\"C:/ti/ccstheia150/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE",
-      "file"      : "C:/Users/otter/workspace_v12/msp430_mchdc/src/main.c"
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/image.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/lib/hdc.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/lib/popcount_table.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/main.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/uart.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/adc12_b.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/aes256.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/comp_e.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/crc.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/crc32.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/cs.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/dma.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/esi.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/eusci_a_spi.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/eusci_a_uart.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/eusci_b_i2c.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/eusci_b_spi.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/framctl.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/framctl_a.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/gpio.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/hspll.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/lcd_c.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/mpu.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/mpy32.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/mtif.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/pmm.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/ram.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/ref_a.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/rtc_b.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/rtc_c.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/saph.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/saph_a.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/sdhs.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/sfr.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/sysctl.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/timer_a.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/timer_b.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/tlv.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/uups.c"
+   },
+   {
+      "directory" : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2002/ccs/ccs_base/msp430/include\" -I\"C:/Users/otter/workspace_ccstheia/msp430_mchdc\" -I\"C:/ti/ccs2002/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430FR5994__ -D_MPU_ENABLE -D_MPU_MANUAL -D_MPU_SEGB1=0x4400 -D_MPU_SEGB2=0x4800 -D_MPU_SAM1=11 -D_MPU_SAM2=11 -D_MPU_SAM3=15 -D_MPU_SAM0=9 -xc",
+      "file"      : "C:/Users/otter/workspace_ccstheia/msp430_mchdc/DriverLib/wdt_a.c"
    }
 ]

@@ -11,30 +11,36 @@ CMD_SRCS += \
 C_SRCS += \
 ../hv.c \
 ../image.c \
-../main.c 
+../main.c \
+../uart.c 
 
 C_DEPS += \
 ./hv.d \
 ./image.d \
-./main.d 
+./main.d \
+./uart.d 
 
 OBJS += \
 ./hv.obj \
 ./image.obj \
-./main.obj 
+./main.obj \
+./uart.obj 
 
 OBJS__QUOTED += \
 "hv.obj" \
 "image.obj" \
-"main.obj" 
+"main.obj" \
+"uart.obj" 
 
 C_DEPS__QUOTED += \
 "hv.d" \
 "image.d" \
-"main.d" 
+"main.d" \
+"uart.d" 
 
 C_SRCS__QUOTED += \
 "../hv.c" \
-"../image.c" 
+"../image.c" \
+"../uart.c" 
 
 
